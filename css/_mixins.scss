@@ -1,6 +1,14 @@
 @mixin button($color : $primary-color, $text : white) {
   background-color: $color;
+  border: 1px solid darken($color, 10%);
+  border-radius: 10%;
   color: $text;
+  &:hover{
+    background: darken($color, 20%);
+  }
+  &:active{
+    background: darken($color, 20%);
+  }
 }
 
 @mixin horizontal-line($color :#abb3b9, $width: 100%, $thickness: 1px){
@@ -17,7 +25,7 @@
   $size: 10px;
   width: $size;
   height: $size;
-  background: rgba($color,0.75);
-  border: 1px solid $color;
+  background: $color;
+  border: 1px solid darken($color, 10%);
   border-radius: 100%;
 }
