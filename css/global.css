@@ -1,5 +1,7 @@
 @charset "UTF-8";
 /* General styles */
+
+@import "variables";
 @font-face {
   font-family: 'Roboto';
   src: url("../font/Roboto-Regular.ttf"); }
