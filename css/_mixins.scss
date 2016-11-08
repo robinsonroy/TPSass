@@ -9,6 +9,6 @@
 }
 
 @mixin photo($size, $name){
-  background: "img/users/#{$name}";
+  background: "img/users/#{$name}.png";
   width: $size;
 }
