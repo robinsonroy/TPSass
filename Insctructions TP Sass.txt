@@ -1,0 +1,82 @@
+TP SCSS
+Groupes de 2
+À envoyer avant 12h à francois@kiliweb.fr
+=========================================
+
+1. Installer Gulp pour compiler les fichiers SCSS
+	- Installer NodeJS en version 5
+		https://nodejs.org/en/
+	- Installer Gulp globalement :
+		sudo npm install -g gulp
+	- Installer Gulp et ses packages :
+		sudo npm install gulp-sass gulp-autoprefixer gulp-sourcemaps -g
+	- Ajouter gulp et ses package en tant que dépendance à son projet (à executer à la racine du projet)
+		sudo npm install --save-dev gulp
+		sudo npm install gulp-sass gulp-autoprefixer gulp-sourcemaps --save-dev
+	- Renommer "global.css" en "global.scss"
+	- Lancer la commande "gulp" dans le terminal (à la racine du projet)
+	- Vérifier que le fichier "global.css" à bien été crée
+
+2. Font-Awesome (gestion des icones)
+	- Importer Font Awesome
+	- Modifier le HTML pour ajouter les 8 icones appropriées
+
+3. Nesting
+	Refactoriser le code global.css pour tirer parti des "nesting selectors" et "parent selectors"
+
+4. CSS3
+	Supprimer la bordure grise à droite du dernier élément du menu grâce à une pseudo-classe CSS.
+	Ajouter une ombre sur le titre principal et le titre des articles pour qu'ils soient plus lisibles
+	Afficher le texte du menu en majuscules (en CSS)
+
+5. Variables
+	Créer 3 variables, les stocker dans un fichier séparé et les importer sous forme de partial :
+		- primary-color (utilisé pour le survol du menu, le bouton upload, le survol des boutons like & comments)
+		- article-width
+		- users (tableau de noms de fichiers des utilisateurs pour la colonne de droite)
+
+6. Commentaires
+	Expliquer très brièvement le rôle des variables dans des commentaires non exportés en CSS
+	Convertir les commentaires existants dans la feuille de style principale en commentaires non exportés en CSS
+
+7. Mixins
+	A. Créer une mixin pour les boutons
+		La couleur du bouton et du texte est configurable
+		Par défaut :
+			- La couleur du bouton = la variable "primary-color"
+			- La couleur du texte = blanc
+
+	B. Créer une mixin pour tracer des lignes horizontales
+		La couleur, la taille et l'épaisseur sont configurables
+		Utiliser la mixin pour les 2 lignes du design (dans le slider et dans la colonne de droite)
+
+	C. Créer une mixin pour afficher les photos de profil
+		La taille est configurable
+
+	D. Créer une mixin pour afficher des points
+		La taille est la couleur des points sont configurables
+
+	Tous les arguments des mixins ont des valeurs par défaut
+
+8. Couleurs
+	Utiliser les fonctions de couleur pour les boutons :
+		- La bordure est 10% plus sombre
+		- Au survol, l'ensemble du bouton s’assombrit
+		- Au clic, il s'assombrit encore davantage
+		L'assombrissement tient compte de la couleur utilisée en argument
+
+9. Directives
+	Utiliser la variable "users" pour afficher les utilisateurs dans la colonne de droite
+	Utiliser une boucle pour afficher les images des articles
+	Utiliser des conditions pour gérer la présentation alternée des articles (point, flèche, marge)
+
+10. Fonction
+	Utiliser une fonction pour déterminer la hauteur des articles en respectant un ratio 3/2
+
+11. Extend
+	Utiliser l'héritage pour que le bouton de commentaire hérite du bouton like dans le slider
+
+12. Bonus
+	Convertir votre fichier en *.sass pour utiliser une syntaxe plus légère
+	Rendre le code compatible avec les 10 dernières versions du navigateur (gulpfile.js)
+
