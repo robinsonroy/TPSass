@@ -26,119 +26,123 @@ ul li {
 .author {
   display: none; }
 
-header.menu {
-  background-color: white; }
-
-header.menu .wrapper {
-  padding: 20px 0; }
-
-header.menu #logo {
-  background: url("../img/logo.png") no-repeat;
-  width: 40px;
-  height: 40px;
-  float: left; }
-
-header.menu nav {
-  float: left;
-  margin-left: 340px; }
-
-header.menu nav ul li {
-  display: inline-block;
-  padding: 0 20px;
-  border-right: 1px solid grey; }
-
-header.menu nav a {
-  font-size: 12px; }
-
-header.menu nav a i {
-  display: block;
-  text-align: center;
-  margin-bottom: 8px;
-  font-size: 18px; }
-
-header.menu a.btn {
-  float: right; }
-
-header#slider {
-  height: 450px;
-  background: url("../img/slider.jpg");
-  background-size: cover;
-  position: relative;
-  color: white; }
-
-header#slider .title {
-  padding: 140px 0 0 150px;
-  float: left;
-  width: 450px; }
-
-header#slider .title h1 {
-  font-size: 60px; }
+header{
+  &.menu {
+    background-color: white;
+    .wrapper {
+      padding: 20px 0;
+    }
+    #logo {
+      background: url("../img/logo.png") no-repeat;
+      width: 40px;
+      height: 40px;
+      float: left;
+    }
+    nav {
+      float: left;
+      margin-left: 340px;
+      ul li {
+        display: inline-block;
+        padding: 0 20px;
+        border-right: 1px solid grey;
+      }
+      a {
+        font-size: 12px;
+        i {
+          display: block;
+          text-align: center;
+          margin-bottom: 8px;
+          font-size: 18px;
+        }
+        &.btn {
+          float: right;
+        }
+      }
+    }
+  }
+  &#slider {
+    height: 450px;
+    background: url("../img/slider.jpg");
+    background-size: cover;
+    position: relative;
+    color: white;
+    .title {
+      padding: 140px 0 0 150px;
+      float: left;
+      width: 450px;
+      h1 {
+        font-size: 60px;
+      }
+    }
+  }
+}
 
 #list-article {
   width: 900px;
   float: left;
-  position: relative; }
-
-#list-article header {
-  padding: 25px;
-  color: grey; }
-
-#list-article header .counter {
-  float: left; }
-
-#list-article header .counter span {
-  padding: 0 15px 0 5px; }
-
-#list-article header time {
-  float: right; }
-
-#list-article #timeline {
-  position: absolute;
-  background-color: white;
-  height: 840px;
-  width: 5px; }
-
-#list-article article {
-  min-height: 100px;
-  min-width: 300px;
   position: relative;
-  margin-bottom: 40px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: inline-block;
-  border: 8px solid white;
-  border-radius: 3px; }
-
-#list-article article h1 {
-  color: white;
-  font-size: 27px;
-  position: absolute;
-  bottom: 15px;
-  left: 15px; }
-
-#list-article article .arrow {
-  background-image: url("../img/arrow.png");
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
-  position: absolute; }
+  header {
+    padding: 25px;
+    color: grey;
+    .counter {
+      float: left;
+      span {
+        padding: 0 15px 0 5px;
+      }
+    }
+    time {
+      float: right;
+    }
+  }
+  #timeline {
+    position: absolute;
+    background-color: white;
+    height: 840px;
+    width: 5px;
+  }
+  article {
+    min-height: 100px;
+    min-width: 300px;
+    position: relative;
+    margin-bottom: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    border: 8px solid white;
+    border-radius: 3px;
+    h1 {
+      color: white;
+      font-size: 27px;
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+    }
+    .arrow {
+      background-image: url("../img/arrow.png");
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+    }
+  }
+}
 
 aside#sidebar {
   width: 300px;
   height: 1050px;
   float: right;
-  background-color: white; }
-
-aside#sidebar h2 {
-  color: #9BA5AC;
-  font-size: 21px;
-  padding: 25px 0 0 30px; }
-
-aside#sidebar #list-users {
-  padding-left: 30px; }
-
-aside#sidebar #list-users div {
-  padding-top: 10px;
-  margin-bottom: 10px;
-  width: 200px;
+  background-color: white;
+  h2 {
+    color: #9BA5AC;
+    font-size: 21px;
+    padding: 25px 0 0 30px;
+  }
+  #list-users {
+    padding-left: 30px;
+    div {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      width: 200px;
+    }
+  }
 }
