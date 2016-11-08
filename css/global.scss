@@ -1,4 +1,4 @@
-/* General styles */
+//General styles
 @font-face {
   font-family: 'Roboto';
   src: url("../font/Roboto-Regular.ttf"); }
@@ -22,7 +22,7 @@ ul li {
 .clear {
   clear: both; }
 
-/* À supprimer quand la mixin "author" est crée */
+// À supprimer quand la mixin "author" est crée
 .author {
   display: none;
 }
