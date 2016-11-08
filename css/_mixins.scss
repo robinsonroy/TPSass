@@ -3,7 +3,12 @@
   color: $text;
 }
 
-@mixin horizontal-line($color, $size, $thickness){
+@mixin horizontal-line($color, $width, $thickness){
   border-bottom: solid $thickness $color;
+  width: $width;
+}
+
+@mixin photo($size, $name){
+  background: "img/users/#{$name}";
   width: $size;
 }
