@@ -157,3 +157,9 @@ aside#sidebar {
     }
   }
 }
+
+.btn.blue{
+  @include button();
+
+
+}
