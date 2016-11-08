@@ -1,0 +1,9 @@
+@mixin button($color : $primary-color, $text : white) {
+  background-color: $color;
+  color: $text;
+}
+
+@mixin horizontal-line($color, $size, $thickness){
+  border-bottom: solid $thickness $color;
+  width: $size;
+}
