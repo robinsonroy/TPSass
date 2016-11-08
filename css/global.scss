@@ -163,5 +163,5 @@ aside#sidebar {
   padding: 5px 10px 5px 10px;
 }
 
-@include "lionel";
-@include "robinson";
+@import "lionel";
+@import "robinson";
