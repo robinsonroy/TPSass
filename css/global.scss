@@ -24,9 +24,11 @@ ul li {
 
 /* À supprimer quand la mixin "author" est crée */
 .author {
-  display: none; }
+  display: none;
+}
 
 header{
+  text-transform: uppercase;
   &.menu {
     background-color: white;
     .wrapper {
@@ -45,6 +47,9 @@ header{
         display: inline-block;
         padding: 0 20px;
         border-right: 1px solid grey;
+        &:last-child{
+          border-right: none;
+        }
       }
       a {
         font-size: 12px;
@@ -127,6 +132,9 @@ header{
   }
 }
 
+h1{
+  text-shadow: 0px 0px 9px #777;
+}
 aside#sidebar {
   width: 300px;
   height: 1050px;
