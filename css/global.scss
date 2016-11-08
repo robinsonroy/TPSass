@@ -160,4 +160,8 @@ aside#sidebar {
 
 .btn.blue{
   @include button();
+  padding: 5px 10px 5px 10px;
 }
+
+@include "lionel";
+@include "robinson";
