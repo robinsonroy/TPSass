@@ -1,3 +1,4 @@
+
 @import "mixins";
 @import "variables";
 
@@ -26,9 +27,9 @@ ul li {
   clear: both; }
 
 // À supprimer quand la mixin "author" est crée
-.author {
-  display: none;
-}
+//.author {
+  //display: none;
+//}
 
 header{
   text-transform: uppercase;
@@ -130,7 +131,7 @@ header{
       background-repeat: no-repeat;
       width: 20px;
       height: 20px;
-      position: absolute;
+      //position: absolute;
     }
   }
 }
