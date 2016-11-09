@@ -11,15 +11,13 @@
   }
 }
 
-@mixin horizontal-line($color :#abb3b9, $width: 100%, $thickness: 1px){
+
 @mixin horizontal-line($color :#abb3b9, $width: 100%, $thickness: 2px){
   border-bottom: solid $thickness $color;
   width: $width;
 }
 
 @mixin photo($name, $size: 100%){
-  background: "img/users/#{$name}.png";
-  width: $size;
   background: url("../img/users/#{$name}.png");
   height: $size;
   background-repeat: no-repeat;
@@ -32,4 +30,21 @@
   background: $color;
   //border: 1px solid darken($color, 10%);
   border-radius: 100%;
+}
+
+@mixin author {
+  &.author{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 10px;
+    border: solid white 2px;
+  }
+}
+
+@mixin article ($articleNumber){
+  background: url("../img/articles/item-#{$articleNumber}.jpg");
+  width: 350px;
+  height: articleHeight(350px);
+  margin: 0px 80px 15px 0px;
 }
