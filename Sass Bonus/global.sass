@@ -1,0 +1,284 @@
+
+@import "mixins"
+@import "variables"
+@import "function"
+
+// General styles
+@font-face
+  font-family: 'Roboto'
+  src: url("../font/Roboto-Regular.ttf")
+
+
+body
+  width: 100%
+  background-color: #E5EAED
+  font-family: 'Roboto', Arial
+
+.wrapper
+  width: 1200px
+  margin: 0 auto
+
+a
+  text-decoration: none
+  color: grey
+
+ul li
+  list-style: none
+
+.clear
+  clear: both
+
+// À supprimer quand la mixin "author" est crée
+//.author
+  //display: none
+//
+
+header
+  &.menu
+    background-color: white
+    .wrapper
+      padding: 20px 0
+
+    #logo
+      background: url("../img/logo.png") no-repeat
+      width: 40px
+      height: 40px
+      float: left
+
+    nav
+      text-transform: uppercase
+      float: left
+      margin-left: 340px
+      ul li
+        display: inline-block
+        padding: 0 20px
+        border-right: 1px solid grey
+        &:last-child
+          border-right: none
+
+
+      a
+        font-size: 12px
+        i
+          display: block
+          text-align: center
+          margin-bottom: 8px
+          font-size: 18px
+
+        &.btn
+          float: right
+
+
+
+
+  &#slider
+    height: 450px
+    background: url("../img/slider.jpg")
+    background-size: cover
+    position: relative
+    color: white
+    .title
+      padding: 140px 0 0 150px
+      float: left
+      width: 450px
+      h1
+        font-size: 60px
+
+
+
+
+
+#list-article
+  width: 900px
+  float: left
+  position: relative
+  header
+    padding: 25px
+    color: grey
+    .counter
+      float: left
+      span
+        padding: 0 15px 0 5px
+
+
+    time
+      float: right
+
+
+  #timeline
+    position: absolute
+    background-color: white
+    height: 840px
+    width: 5px
+
+  article
+    min-height: 100px
+    min-width: 300px
+    position: relative
+    margin-bottom: 40px
+    background-repeat: no-repeat
+    background-size: cover
+    display: inline-block
+    border: 8px solid white
+    border-radius: 3px
+    h1
+      color: white
+      font-size: 27px
+      position: absolute
+      bottom: 15px
+      left: 15px
+
+    .arrow
+      background-image: url("../img/arrow.png")
+      background-repeat: no-repeat
+      width: 20px
+      height: 20px
+      //position: absolute
+
+
+
+img.author.mini
+  margin-bottom: -15px
+
+
+h1
+  text-shadow: 0px 0px 9px #777
+
+aside#sidebar
+  width: 300px
+  height: 1050px
+  float: right
+  background-color: white
+  h2
+    color: #9BA5AC
+    font-size: 21px
+    padding: 25px 0 0 30px
+
+  #list-users
+    padding-left: 30px
+    div
+      padding-top: 10px
+      margin-bottom: 10px
+      width: 200px
+
+
+
+
+.btn.blue
+  @include button()
+  padding: 5px 10px 5px 10px
+
+
+.subline
+  img, h2
+    display: inline-block
+
+
+
+article
+  @for $i from 1 through 6
+    &.item-#{$i}
+      @include article($i)
+
+
+
+
+
+img
+  @include author
+
+
+#timeline
+
+  float: left
+  margin-left: 405px
+
+
+@for $i from 1 through 6
+  article
+    &.item-#{$i}
+      .arrow
+
+        //les articles de gauche
+        @if $i % 2 != 0
+          float: right
+          margin-right: -28px
+          margin-top: 10px
+
+        //les articles de droite
+        @else
+          float: left
+          margin-left: -28px
+          margin-top: articleHeight(350px)-30px
+          transform: rotate(180deg)
+
+
+
+      .dot
+        //les articles de gauche
+        @if $i % 2 != 0
+          @include point()
+          float: right
+          margin-right: -59.5px
+          margin-top: 10px
+
+        //les articles de droite
+        @else
+          @include point()
+          float: left
+          margin-left: -59.5px
+          margin-top: articleHeight(350px)-30px
+
+
+
+
+
+
+@each $user in $users
+  div.#{$user}
+    @include photo($user)
+    padding: 10px 0px 10px 50px
+
+
+#like
+  float: left
+  margin: 20px 45px 0px 0px
+  a
+    border: solid 1px white
+    border-radius: 50%
+    padding: 10px
+    color: white
+
+
+
+#comments
+  @extend #like
+
+
+.subline .line
+  @include horizontal-line(white, 60px)
+  margin-top: 30px
+
+#sidebar .line
+  @include horizontal-line()
+  margin: 15px 0 15px 0
+
+
+#list-article header i.fa
+  margin-right: 10px
+
+
+nav li
+  text-align: center
+  i.fa
+    margin-bottom: 10px
+
+  a
+   display: block
+
+
+
+.btn.blue
+  float: right
+  i.fa
+    margin-left: 5px
