@@ -1,0 +1,51 @@
+@each $user in $users {
+  div.#{$user} {
+    @include photo($user);
+    padding: 10px 0px 10px 50px;
+  }
+}
+
+#like{
+  float: left;
+  margin: 20px 45px 0px 0px;
+  a{
+    border: solid 1px white;
+    border-radius: 50%;
+    padding: 10px;
+    color: white;
+  }
+}
+
+#comments{
+  @extend #like;
+}
+
+.subline .line{
+  @include horizontal-line(white, 60px);
+  margin-top: 30px;
+}
+#sidebar .line{
+  @include horizontal-line();
+  margin: 15px 0 15px 0;
+}
+
+#list-article header i.fa{
+  margin-right: 10px;
+}
+
+nav li{
+  text-align: center;
+  i.fa{
+    margin-bottom: 10px;
+  }
+  a{
+   display: block;
+  }
+}
+
+.btn.blue{
+  float: right;
+  i.fa{
+    margin-left: 5px;
+  }
+}

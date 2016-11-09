@@ -12,6 +12,7 @@
 }
 
 @mixin horizontal-line($color :#abb3b9, $width: 100%, $thickness: 1px){
+@mixin horizontal-line($color :#abb3b9, $width: 100%, $thickness: 2px){
   border-bottom: solid $thickness $color;
   width: $width;
 }
@@ -19,6 +20,9 @@
 @mixin photo($name, $size: 100%){
   background: "img/users/#{$name}.png";
   width: $size;
+  background: url("../img/users/#{$name}.png");
+  height: $size;
+  background-repeat: no-repeat;
 }
 
 @mixin point($color:#b5bdc2) {
