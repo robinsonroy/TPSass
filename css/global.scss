@@ -6,30 +6,36 @@
 // General styles
 @font-face {
   font-family: 'Roboto';
-  src: url("../font/Roboto-Regular.ttf"); }
+  src: url("../font/Roboto-Regular.ttf");
+}
 
 body {
   width: 100%;
   background-color: #E5EAED;
-  font-family: 'Roboto', Arial; }
+  font-family: 'Roboto', Arial;
+}
 
 .wrapper {
   width: 1200px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 a {
   text-decoration: none;
-  color: grey; }
+  color: grey;
+}
 
 ul li {
-  list-style: none; }
+  list-style: none;
+}
 
 .clear {
-  clear: both; }
+  clear: both;
+}
 
 // À supprimer quand la mixin "author" est crée
 //.author {
-  //display: none;
+//display: none;
 //}
 
 header{
@@ -273,7 +279,7 @@ nav li{
     margin-bottom: 10px;
   }
   a{
-   display: block;
+    display: block;
   }
 }
 
