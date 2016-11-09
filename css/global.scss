@@ -31,7 +31,6 @@ ul li {
 }
 
 header{
-  text-transform: uppercase;
   &.menu {
     background-color: white;
     .wrapper {
@@ -44,6 +43,7 @@ header{
       float: left;
     }
     nav {
+      text-transform: uppercase;
       float: left;
       margin-left: 340px;
       ul li {
