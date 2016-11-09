@@ -5,7 +5,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var plumber = require('gulp-plumber');
 
 gulp.task('css', function(){
-	gulp.src('css/global.sass')
+	gulp.src('css/global.scss')
     .pipe(plumber({
         handleError: function (err) {
             console.log(err);
@@ -22,7 +22,7 @@ gulp.task('css', function(){
 });
 
 gulp.task('watch', function(){
-	gulp.watch('css/*.sass', ['css']);
+	gulp.watch('css/*.scss', ['css']);
 });
 
 gulp.task('default', ['css', 'watch']);
